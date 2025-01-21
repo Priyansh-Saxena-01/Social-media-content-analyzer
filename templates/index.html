@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Content Analyzer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/dropzone.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/dropzone.min.css" />
+    <link rel="stylesheet" href="social-media-analyzer\static\styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Upload Document or Image for Analysis</h1>
+        <form action="/upload" method="post" class="dropzone" id="myDropzone"></form>
+        
+        <div id="ocr-result" class="mt-4">
+            <h3>OCR Result:</h3>
+            <p id="ocr-text"></p>
+        </div>
+        
+        <div id="analysis-result" class="mt-4">
+            <h3>Analysis & Suggestions:</h3>
+            <p id="suggestions"></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    
+</html>

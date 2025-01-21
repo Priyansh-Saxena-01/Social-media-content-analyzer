@@ -1,0 +1,175 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.7rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+#ocr-result, #analysis-result {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    display: none;
+}
+
+#ocr-text, #suggestions {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Style the Dropzone upload section */
+.dropzone {
+    border: 2px dashed #007bff;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: #f0f9ff;
+    text-align: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.dropzone:hover {
+    background-color: #e0f7ff;
+}
+
+.dropzone .dz-message {
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* File input styling */
+.file-input {
+    display: none;
+}
+
+.upload-btn {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.upload-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Suggestions List Styling */
+.suggestions-list {
+    margin-top: 20px;
+}
+
+.suggestion-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.suggestion-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.suggestion-item h4 {
+    color: #2d3436;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.suggestion-item p {
+    font-size: 1.2em;
+    color: #636e72;
+}
+
+.suggestion-item .emoji {
+    font-size: 1.2em;
+}
+
+.suggestion-item .tip-type {
+    font-weight: bold;
+    color: #0984e3;
+}
+
+.suggestion-item .correction {
+    font-style: italic;
+    color: #d63031;
+}
+
+/* Animation for suggestions */
+.suggestion {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #dff0d8;
+    color: #3c763d;
+    border-radius: 5px;
+    border: 1px solid #d0e9c6;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+.suggestion:hover {
+    transform: scale(1.05);
+}
+
+.suggestion-error {
+    background-color: #f2dede;
+    color: #a94442;
+    border-color: #ebccd1;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .upload-btn {
+        width: 100%;
+    }
+}
